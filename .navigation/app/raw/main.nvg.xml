@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2015 Valter Kasper
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<navigationModel
+    ns="http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+    <locations
+        class="java.util.ArrayList">
+        <statePointEntry>
+            <state
+                class="com.android.tools.idea.editors.navigation.model.ActivityState"
+                className="com.zakioussama.movieapp.ui.movie.MovieActivity"/>
+            <point
+                x="-56"
+                y="116"/>
+        </statePointEntry>
+        <statePointEntry>
+            <state
+                class="com.android.tools.idea.editors.navigation.model.ActivityState"
+                className="com.zakioussama.movieapp.activities.takes.BarActivity"/>
+            <point
+                x="880"
+                y="-48"/>
+        </statePointEntry>
+        <statePointEntry>
+            <state
+                class="com.android.tools.idea.editors.navigation.model.ActivityState"
+                className="com.zakioussama.movieapp.activities.takes.ComputeActivity"/>
+            <point
+                x="1692"
+                y="548"/>
+        </statePointEntry>
+        <statePointEntry>
+            <state
+                class="com.android.tools.idea.editors.navigation.model.ActivityState"
+                className="com.zakioussama.movieapp.activities.ItemsActivity"/>
+            <point
+                x="648"
+                y="248"/>
+        </statePointEntry>
+        <statePointEntry>
+            <state
+                class="com.android.tools.idea.editors.navigation.model.ActivityState"
+                className="com.zakioussama.movieapp.activities.takes.FooActivity"/>
+            <point
+                x="700"
+                y="300"/>
+        </statePointEntry>
+        <statePointEntry>
+            <state
+                class="com.android.tools.idea.editors.navigation.model.ActivityState"
+                className="com.zakioussama.movieapp.activities.MainActivity"/>
+            <point
+                x="2164"
+                y="124"/>
+        </statePointEntry>
+    </locations>
+</navigationModel>

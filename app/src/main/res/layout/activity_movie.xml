@@ -1,0 +1,206 @@
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2015 Zaki Oussama
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zakioussama.sosapp.ui.movie.MovieActivity">
+    <!-- The main content view -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/movie_toolbar"/>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:background="@color/background_material_dark"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvImdbLabel"
+                    style="@style/ScoreTextStyle"
+                    android:layout_alignTop="@+id/tvImdb"
+                    android:layout_toLeftOf="@+id/tvImdb"
+                    android:layout_toStartOf="@+id/tvImdb"
+                    android:background="@color/primary"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/imdb_label"/>
+
+                <TextView
+                    android:id="@+id/tvImdb"
+                    style="@style/ScoreTextStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/primary"
+                    android:text="@string/imdb_label"/>
+
+                <TextView
+                    android:id="@+id/tvMetascoreLabel"
+                    style="@style/ScoreTextStyle"
+                    android:layout_below="@+id/tvImdbLabel"
+                    android:layout_toLeftOf="@+id/tvMetascore"
+                    android:layout_toStartOf="@+id/tvMetascore"
+                    android:background="@color/primary"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/metacritic_label"/>
+
+                <TextView
+                    android:id="@+id/tvMetascore"
+                    style="@style/ScoreTextStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tvImdb"
+                    android:background="@color/primary"
+                    android:text="@string/metacritic_label"/>
+
+                <TextView
+                    android:id="@+id/tvPLot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvCountry"
+                    android:layout_marginBottom="56dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:padding="16dp"
+                    android:text="Small Text"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/primary_text_default_material_dark"/>
+
+                <TextView
+                    android:id="@+id/tvDirectorLabel"
+                    style="@style/MovieInfoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvMetascore"
+                    android:layout_marginTop="16dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/director_label"/>
+
+                <TextView
+                    android:id="@+id/tvDirector"
+                    style="@style/MovieInfoShortText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvDirectorLabel"
+                    android:layout_toEndOf="@+id/tvDirectorLabel"
+                    android:layout_toRightOf="@+id/tvDirectorLabel"
+                    android:text="Steven Spielberg Steven Spielberg Steven Spielberg Steven Spielberg"/>
+
+                <TextView
+                    android:id="@+id/tvActorsLabel"
+                    style="@style/MovieInfoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDirector"
+                    android:layout_toLeftOf="@+id/tvDirector"
+                    android:layout_toStartOf="@+id/tvDirector"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/actor_label"/>
+
+                <TextView
+                    android:id="@+id/tvActors"
+                    style="@style/MovieInfoShortText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvDirector"
+                    android:layout_toEndOf="@+id/tvCountryLabel"
+                    android:layout_toRightOf="@+id/tvCountryLabel"
+                    android:text="Ladislav Chudik Ladislav Chudik Ladislav Chudik Ladislav Chudik Ladislav Chudik"/>
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    style="@style/MovieInfoShortText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tvCountryLabel"
+                    android:layout_toEndOf="@+id/tvDirectorLabel"
+                    android:layout_toRightOf="@+id/tvDirectorLabel"
+                    android:text="Slovakia"/>
+
+                <TextView
+                    android:id="@+id/tvCountryLabel"
+                    style="@style/MovieInfoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/tvActors"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/country_label"/>
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fabBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:src="@drawable/ic_bookmark_add"
+
+            app:fabSize="normal"
+            app:layout_anchor="@+id/app_bar_layout"
+            app:layout_anchorGravity="bottom|left|start"/>
+
+        <Button
+            android:id="@+id/bLike"
+            style="@style/opinionButton"
+            android:text="Like"
+            app:layout_anchor="@id/scroll"
+            app:layout_anchorGravity="bottom|right|end"/>
+
+        <Button
+            android:id="@+id/bDislike"
+            style="@style/opinionButton"
+            android:text="Meh"
+            app:layout_anchor="@id/scroll"
+            app:layout_anchorGravity="bottom|left|start"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- The navigation drawer -->
+    <include layout="@layout/navigation_drawer"/>
+</android.support.v4.widget.DrawerLayout>
+
